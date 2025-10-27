@@ -1,0 +1,70 @@
+# Build outputs
+/bin/
+/obj/
+/out/
+
+# Visual Studio / IDE
+.vs/
+.vscode/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Rider
+.idea/
+*.sln.iml
+
+# NuGet
+*.nupkg
+.packages/
+.nuget/
+
+# Publish output
+publish/
+*.Publish.xml
+
+# ASP.NET / dotnet artifacts
+*.dll
+*.exe
+*.pdb
+*.app
+*.vsix
+
+# Test results & coverage
+TestResults/
+coverage/
+*.trx
+
+# Database files (SQLite)
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+
+# Local secrets & env files
+secrets.json
+.env
+.env.*
+api/appsettings.json
+
+
+# Logs and temp files
+*.log
+tmp/
+temp/
+
+# Certificate / keys
+*.pfx
+*.key
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# User-specific files
+*.local
+*.userprefs
+
+# IDE workspace snapshots
+*.CodeWorkspaces
