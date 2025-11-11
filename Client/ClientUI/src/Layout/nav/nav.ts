@@ -10,30 +10,25 @@ import { tick } from '@angular/core/testing';
   styleUrl: './nav.css',
 })
 export class Nav {
-  private accountService = inject(AccountService);
+  protected accountService = inject(AccountService);
   protected creds: any = {};
-  protected loggedIn = signal(false);
-
-  
 
   login() {
-
     this.accountService.login(this.creds).subscribe({
-      next: response =>{
-console.log(response),
-        this.loggedIn.set(true);this.creds = {};
-      } ,
+      next: (response) => {
+        console.log(response),
+        this.creds = {};
+      },
       error: (error) => {
         console.error(error);
       },
       complete: () => {
         console.log('completed');
-        console.log(this.loggedIn());
       },
     });
   }
 
   logout() {
-    this.loggedIn.set(false);
+    this.accountService.logout();
   }
 }
